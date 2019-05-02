@@ -6,6 +6,15 @@
 // Initial array of movies
 
 // Create a prompt to display score.
+var counter = 0;
+
+setInterval("timer()", 1000);
+
+function timer() {
+  counter ++;
+  $("#counter").text(counter);
+}
+//-------------------QUIZ SECTION-----------------------------
 function check(){
 
     var question1 = document.quiz.question1.value;
