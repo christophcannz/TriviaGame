@@ -19,11 +19,16 @@ $(document).ready(function(){
 
         function timer() {
             counter=counter-1;
+            if (counter < 0) {
+                clearInterval(counter);
+                return;
+            }
             $("#timer").text(counter);    
         }
         
 
         timer();
+        //alert("TIMES UP!");
     });
   });
 
