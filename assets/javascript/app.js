@@ -8,20 +8,25 @@
 // Create a prompt to display score.
 
 //-----------------TIMER SETUP--------------------------------
-
+var gameTimer;
 $(document).ready(function(){
     $(".container").hide();
     $(".btn2").click(function(){
+        clearInterval(gameTimer);
       $(".container").show();
-      var counter = 13;
+      $("#button").attr("disabled", false);
+      var counter = 14;
+      document.getElementsByClassName("mcHammer").checked = false;
 
-        setInterval(timer, 1000);
+      gameTimer = setInterval(timer, 1000);
 
         function timer() {
             counter=counter-1;
-            if (counter < 0) {
-                clearInterval(counter);
-                return;
+            if (counter <= 0) {
+                clearInterval(gameTimer);
+                alert("TOO SLOW!");
+                $(".container").hide();
+                location.reload();
             }
             $("#timer").text(counter);    
         }
@@ -35,6 +40,7 @@ $(document).ready(function(){
 
 //-------------------QUIZ SECTION-----------------------------
 function check(){
+    clearInterval(gameTimer);
 
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
@@ -75,7 +81,7 @@ function check(){
         range = 1;
     }
 
-    if (correct > 3) {
+    if (correct >= 3) {
         range = 0;
     }
     
@@ -83,5 +89,6 @@ document.getElementById("after_submit").style.visibility = "visible";
 
 document.getElementById("message").innerHTML = messages[range];
 document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+$("#button").attr("disabled", true);
 
 }
