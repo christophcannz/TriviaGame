@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Trivia Game</title>
+</head>
+
+<body>
+    <div class="container" style="background-color:turquoise; width:75%; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <h1>Trivia Game</h1>
+
+    <form id="Quizzzz" name="quiz">
+
+        <p><strong>What does HTML stand for?</strong></p>
+        <input type="radio" id="mc" name="question1" value="hyper text manipulation language">a. Hyper text Manipulation Language<br>
+        <input type="radio" id="mc" name="question1" value="hyper text markup layout">b. Hyper text Markup layout <br>
+        <input type="radio" id="mc" name="question1" value="hyper text markup language">c. Hyper text Markup Language<br>
+<br>
+        <p><strong>2: What does CSS stand for?</strong></p>
+        <input type="radio" id="mc" name="question2" value="content structure script">a. Content Structure Script<br>
+        <input type="radio" id="mc" name="question2" value="cascading style sheet">b. Cascading Style Sheet<br>
+        <input type="radio" id="mc" name="question2" value="cool symmetrical styles">c. Cool Symmetrical Styles (Bro!)<br>
+<br>
+        <p><strong>3: CSS blocks should always end with what character?</strong></p>
+        <input type="radio" id="mc" name="question3" value="forward slash">a. /<br>
+        <input type="radio" id="mc" name="question3" value="colon">b. :<br>
+        <input type="radio" id="mc" name="question3" value="semicolon">c. ;<br>
+<br>
+        <p><strong>4: What is the symbol for "not" in JavaScript?</strong></p>
+        <input type="radio" id="mc" name="question4" value="exclamation point">a. !<br>
+        <input type="radio" id="mc" name="question4" value="back slash">b. \<br>
+        <input type="radio" id="mc" name="question4" value="n">c. n<br>
+<br>
+        <input id="button" type="button" value="DONE" onclick = "check();">
+        
+    </form>
+
+    <div id = "after_submit">
+        <p id="message"></p>
+        <p id="number_correct"></p>  
+    </div>
+
+    </div>
+
+    <script src="./assets/javascript/app.js"></script>
+</body>
+</html>
