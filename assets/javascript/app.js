@@ -6,14 +6,28 @@
 // Initial array of movies
 
 // Create a prompt to display score.
-var counter = 0;
 
-setInterval("timer()", 1000);
+//-----------------TIMER SETUP--------------------------------
 
-function timer() {
-  counter ++;
-  $("#counter").text(counter);
-}
+$(document).ready(function(){
+    $(".container").hide();
+    $(".btn2").click(function(){
+      $(".container").show();
+      var counter = 13;
+
+        setInterval(timer, 1000);
+
+        function timer() {
+            counter=counter-1;
+            $("#timer").text(counter);    
+        }
+        
+
+        timer();
+    });
+  });
+
+
 //-------------------QUIZ SECTION-----------------------------
 function check(){
 
@@ -22,6 +36,7 @@ function check(){
     var question3 = document.quiz.question3.value;
     var question4 = document.quiz.question4.value;
     var correct = 0;
+    console.log(question1);
 
     if (question1 == "hyper text markup language") {
         correct++;
@@ -39,19 +54,19 @@ function check(){
         correct++;
     }
 
-    var messages = ["Nice Work!", "Solid Attempt!", "Not Bad", "You've Failed!"];
+    var messages = ["Nice Work!", "Solid Attempt!", "Just One, Eh?", "Rubbish!"];
 
     var range;
 
-    if (correct < 1) {
+    if (correct === 0) {
         range = 3;
     }
 
-    if (correct = 0 && correct < 4) {
+    if (correct === 1) {
         range = 2;
     }
 
-    if (correct > 2) {
+    if (correct === 2) {
         range = 1;
     }
 
