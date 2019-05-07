@@ -1,5 +1,5 @@
 # TriviaGame
-JavaScript Assignment 2
+JavaScript
 
 This is a game for educational purposes. It features four multiple choice questions to be answered while being under a 13 second time-constraint. The setup is for the player to arrive at the main screen which features directions and a BEGIN button. once the player clicks Begin, the timer will start and they must correctly answer the questions by the end of the count. If they fail to do so, an alert function will interrupt the game and display. The game will then restart when the player presses ok. 
 
